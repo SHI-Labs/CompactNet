@@ -1,0 +1,8 @@
+jax
+dm-haiku
+optax
+matplotlib
+numpy
+pandas
+seaborn
+sklearn
