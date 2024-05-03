@@ -21,7 +21,7 @@ Running several times you should be quite similar to ours.
 These results maintain the same random seed and the same training limit.
 
 | Network | Number of Neurons| Number of Parameters | Accuracy Pre Salient | Accuracy Post Salient |
-|:--------|---------------------:|---------------------:|----------------------:|-----------------------:|
+|:--------:|:---------------------:|:---------------------:|:----------------------:|:-----------------------:|
 | [300, 300, 300] | 900 | 190,214 | 81.38% | 80.14% |
 | [100, 100, 100] | 300 | 23,414 | 82.79% | 82.04% |
 | [50, 50, 50] | 150 | 6,714 | 85.13% | 81.65% |
@@ -41,7 +41,7 @@ These results maintain the same random seed and the same training limit.
 Here are some results where we have changed the random seed and training length. 
 We set `num_training_steps` to 50k for an arbitrarially long run and report how many steps before the network early stopped (`Steps`)
 | Network | Number of Neurons|Number of Parameters | seed | Accuarcy Pre Salient | Steps | Accuracy Post Salient | Steps |
-|:--------|----|---------------------:|:----:|---------------------:|:-----:|----------------------:|:-----:|
+|:--------:|:----:|:---------------------:|:----:|:---------------------:|:-----:|:----------------------:|:-----:|
 | [3,3] | 6 | 122 | 552 | 81.60% | 20700 | 81.69% | 22100 |
 | [2,2] | 4 | 84 | 8110 | 81.33%  | 22700 | 80.44% | 23300 |
 
@@ -52,7 +52,7 @@ python test_ckpt.py -hn 2
 ```
 
 | Network | Number of Neurons|Number of Parameters | Accuarcy Pre Salient | Steps | Accuracy Post Salient | Steps |
-|:--------|---------------------:|:----:|---------------------:|:-----:|----------------------:|:-----:|
+|:--------:|:---------------------:|:----:|:---------------------:|:-----:|:----------------------:|:-----:|
 | [3] | 3 | 110 | 80.85% | ~1000 | 80.43% | ~1000 |
 | [2] | 2 | 78  | 82.42% | ~1000 | 80.33% | ~1000 |
 
