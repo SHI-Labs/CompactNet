@@ -22,34 +22,39 @@ These results maintain the same random seed and the same training limit.
 
 | Network | Number of Neurons| Number of Parameters | Accuracy Pre Salient | Accuracy Post Salient |
 |:--------|---------------------:|---------------------:|----------------------:|-----------------------:|
-|[300, 300, 300] | 900| 190,214 | 81.38% | 80.14% |
-|[100, 100, 100] | 300| 23,414 | 82.79% | 82.04% |
-|[50, 50, 50] | 150 |6,714 | 85.13% | 81.65% |
-|[10, 10, 10] | 30 |554 | 84.45% | 82.30% |
-|[5, 5, 5] | 15 |234 | 83.06% | 80.42% |
-|[4, 4, 4] | 12|182 | 76.73% | 65.19% |
-|[3, 3, 3] | 9|134 | 66.33% | 74.93% |
-|[50, 50] | 100|4,164 | 87.15% | 82.65% |
-|[10, 10] | 20|444 | 83.02% | 81.50% |
-|[5, 5] | 10|204 | 82.19% | 81.33% |
-|[4, 4] | 8|162 | 81.89% | 81.03% |
-|[3, 3] | 6|122 | 77.72% | 76.24% |
-|baseline (direct calculate) |0| 0 | 73.82% | 73.82% |
-|DeepMind's 4 layer reported | 900| 190,214 | 78% | 78% |
-|KAN| 200|
+| [300, 300, 300] | 900 | 190,214 | 81.38% | 80.14% |
+| [100, 100, 100] | 300 | 23,414 | 82.79% | 82.04% |
+| [50, 50, 50] | 150 | 6,714 | 85.13% | 81.65% |
+| [10, 10, 10] | 30 | 554 | 84.45% | 82.30% |
+| [5, 5, 5] | 15 | 234 | 83.06% | 80.42% |
+| [4, 4, 4] | 12 | 182 | 76.73% | 65.19% |
+| [3, 3, 3] | 9 | 134 | 66.33% | 74.93% |
+| [50, 50] | 100 | 4,164 | 87.15% | 82.65% |
+| [10, 10] | 20 | 444 | 83.02% | 81.50% |
+| [5, 5] | 10 | 204 | 82.19% | 81.33% |
+| [4, 4] | 8 | 162 | 81.89% | 81.03% |
+| [3, 3] | 6 | 122 | 77.72% | 76.24% |
+| Baseline (direct calculate) | 0 | 0 | 73.82% | 73.82% |
+| DeepMind's 4 layer reported | 900 | 190,214 | 78% | 78% |
+| KAN | 32 | 200 | 81.6% | 78.2% |
 
 Here are some results where we have changed the random seed and training length. 
 We set `num_training_steps` to 50k for an arbitrarially long run and report how many steps before the network early stopped (`Steps`)
 | Network | Number of Neurons|Number of Parameters | seed | Accuarcy Pre Salient | Steps | Accuracy Post Salient | Steps |
 |:--------|----|---------------------:|:----:|---------------------:|:-----:|----------------------:|:-----:|
-| [3,3] | 6|122 | 552 | 81.60% | 20700 | 81.69% | 22100 |
-| [2,2] | 4|84 | 8110 | 81.33%  | 22700 | 80.44% | 23300 |
+| [3,3] | 6 | 122 | 552 | 81.60% | 20700 | 81.69% | 22100 |
+| [2,2] | 4 | 84 | 8110 | 81.33%  | 22700 | 80.44% | 23300 |
 
-We also have advanced methods to train a two layer extremely small MLP in 1k steps that can achieve average performance (averaged over 10 times) of more thann 80%. You may check the models in the folder `ckpt` for details.
+We also have advanced methods to train a two layer extremely small MLP in 1k steps that can achieve average performance (averaged over 10 times) of more thann 80%. You may check the models in the folder `ckpt` for details. You may run the following code for inference.
+```python
+python test_ckpt.py -hn 3
+python test_ckpt.py -hn 2
+```
+
 | Network | Number of Neurons|Number of Parameters | Accuarcy Pre Salient | Steps | Accuracy Post Salient | Steps |
 |:--------|---------------------:|:----:|---------------------:|:-----:|----------------------:|:-----:|
-| [3] | 3|110 | 80.85% | ~1000 | 80.43% | ~1000 |
-| [2] | 2|78  | 82.42% | ~1000 | 80.33% | ~1000 |
+| [3] | 3 | 110 | 80.85% | ~1000 | 80.43% | ~1000 |
+| [2] | 2 | 78  | 82.42% | ~1000 | 80.33% | ~1000 |
 
 
 ## Running
