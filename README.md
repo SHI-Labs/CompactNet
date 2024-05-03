@@ -20,7 +20,7 @@ There are some variances so numbers may change slightly during your runs.
 Running several times you should be quite similar to ours.
 These results maintain the same random seed and the same training limit.
 
-| Network | Number of Neurons| Number of Parameters | Accuracy Pre Salient | Accuracy Post Salient |
+| Network | Number of Hidden Neurons| Number of Parameters | Accuracy Pre Salient | Accuracy Post Salient |
 |:--------:|:---------------------:|:---------------------:|:----------------------:|:-----------------------:|
 | [300, 300, 300] | 900 | 190,214 | 81.38% | 80.14% |
 | [100, 100, 100] | 300 | 23,414 | 82.79% | 82.04% |
@@ -36,7 +36,7 @@ These results maintain the same random seed and the same training limit.
 | [3, 3] | 6 | 122 | 77.72% | 76.24% |
 | Baseline (direct calculate) | 0 | 0 | 73.82% | 73.82% |
 | DeepMind's 4 layer reported | 900 | 190,214 | 78% | 78% |
-| KAN | 32 | 200 | 81.6% | 78.2% |
+| KAN | N/A | 200 | 81.6% | 78.2% |
 
 Here are some results where we have changed the random seed and training length. 
 We set `num_training_steps` to 50k for an arbitrarially long run and report how many steps before the network early stopped (`Steps`)
